@@ -58,5 +58,3 @@ function getTotalSegundos(videos, tipo){
 
 console.log(getTotalSegundos(getObjetos(str), 'Redux Video') === 1847);
 console.log(getTotalSegundos(getObjetos(str), 'Flexbox Video') === 6132);
-
-//Prueba Push Branch Resueltos
