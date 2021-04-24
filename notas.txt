@@ -1,0 +1,82 @@
+- en el gitignore se establece que los nodemodules no se suben a GITHUB
+
+en el package-lock.json estan todas las dependencias, de lo que depende 
+
+- PACKAGE.JSON: listado de todas las dependencias
+    --> son las dependencias que yo genere (lo que instalo). puede ser que  'chalck' utilice otras dependencias
+        y esas figuran en el package-lock.json
+
+- PACKAGE-LOCK.JSON --> son las dependencias de las dependencias 
+
+ cuando me clono un repo hago un npm install, para que lea el package.json y me instale todas las dependencias
+
+
+NODEMON --> es un paquete global que ejecuta el codigo, y deja en estado de watching, queda escucchando el cambio y cuando hay un cambio
+lo refresca automaticamente
+
+--------------
+N O D E  M O N 
+--------------
+- INSTALAR GLOBALMENTE NODEMON:  npm install nodemon -g ()
+- EJECUTAR NODEMON: nodemon 'nombreDelArchivoAEjecutar'
+
+Cuando se instala algo globalmente no se generan dependencias
+
+- scripts de npm: son scripts que estan en el package.json. Me ayudan a hacer sentencias varias cuando ejecute algo
+                    ej: "start": "nodemon app.js" | cuando hago npm start directemente ejecuta el archivo app.js
+                    ej: "miScript" "node ./ejercicios/videos.js" | cuango hago un script NO standar lo ejecuto asi --> npm run miScript
+
+- npx: no baje, no instala. Ejecuta el modulo una sola vez. (cowsay es un paquete npm) --> Ej: npx cowsay "Hola mundo"
+
+
+PAQUETES NPM
+para instalar paquete --> npm "nombrepaquete"
+
+- validator.js (validaciones de todo tipo, por ejemplo si es mail o no)
+- para utilizarlo hago: const validator = require('validator')
+                        validator.isEmail("pablof@tecnoshare.com")
+
+-----------------------------
+MODULE.EXPORT | MODULE.IMPORT
+-----------------------------
+para usar funciones que estan en otro archivos (.js) tengo que hacer un export --> module.exports = {sum, res}   
+                                                                                   module.exports = {"suma": sum, "resta": res}       
+    y luego las importo donde necesite: const utils = require('./utils.js');
+                                                        utils.sum(5,2);
+
+fileSystem --> es el modulo nativo de NODE para manejar todo el sistema de archivos
+
+!!!!NODE trabaja de forma asincrona por default!!!!
+
+const fs = require('fs');
+const PATH = `${__dirname}/texto.txt`
+const texto = fs.readFileSync(PATH, 'utf-8'); 
+
+fs.writeFileSync --> escribo archivo 
+
+text += `
+Hola mundo desde codigo
+`;
+fs.writeFileSync(PATH, texto);
+
+-------
+J S O N 
+-------
+JSON es la forma que tenemos de representar un OBJETO en javascript y transformarlo en TEXTO 
+JSON 
+ - contiene solo PROPIEDADES, no metodos 
+ - requiere usar "" (comillas dobles)
+ - las propiedades estan encerradas entre ""
+
+ - JSON.parse --> Convierte un TEXTO con formato JSON valido a OBJETO
+ - JSON.stringify --> Convierte OBJETOS JSON a formato TEXTO (string)
+
+ para indentar le paso dos parametros (null, '  ') (el primero parametro si quiero que reemplace algo) (el segundo para que agregue dos espacios)
+
+ -------
+ C R U D 
+ -------
+
+
+
+

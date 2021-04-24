@@ -21,7 +21,7 @@ console.log(nombres.split(';')[1]);
 let nombres2 = "Joaquin Lopez; Ramiro Garcia; Florencia Perez";
 let arrayNombres = nombres2.split(';'); // Convierte a ARRAY
 console.log(arrayNombres.slice(0,1)); // Joaquin - RAMIRO y FLORENCIA NO!
-console.log(arrayNombres.slice(0,-1)); // Joaquin y Ramio -- FLORENCIA NO!
+console.log(arrayNombres.slice(0,-1)); // Joaquin y Ramiro -- FLORENCIA NO!
 /////////////////////////////////////////////////
 
 //4 - SPLICE
@@ -115,6 +115,10 @@ console.log(
  // 9 - SORT
  // ORDENAR SEGUN EDAD (int)
  // ORDERNAR SEGUN NOMBRE (string)
+
+ const arrayNumeros = [1,2,1,2,1,3,2];
+ // Ordena el array de menor a mayor
+ console.log(arrayNumeros.sort())
  
  const arrayNombres5 = [
     {Nombre: "Wilson Rodriguez", Edad: 15},
